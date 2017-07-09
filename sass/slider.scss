@@ -1,0 +1,36 @@
+@import "lg-grid"; 
+$margin-slider:10%;
+.slider{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../imagenes/slider.png);
+    background-size:cover;
+    background-attachment: fixed; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}  
+
+.speach{
+    font-family: $fuente;
+    font-weight: normal;
+    margin-left: $margin-slider;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.speach-parrafo{
+    margin-left: $margin-slider;
+    font-family: $fuente;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+}
+.speach-boton{
+    margin-left: $margin-slider;
+    padding: 20px;
+    font-family: $fuente;
+    border: 2px solid $color-negro;
+    color: #333;
+    background: rgba(white,.5);
+}

@@ -1,0 +1,18 @@
+$color-primario:#F4552E;
+$color-secundario:#8DC05E;
+$color-fondo:#f5f5f5;
+$color-fondo2:#e8e8e8;
+$color-negro:#5d5d5d;
+
+$fuente:'Raleway', sans-serif;
+$padding-contenedor:20px;
+
+@mixin display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.movimiento{
+    top: 70px;
+    transition: all .3s;
+}

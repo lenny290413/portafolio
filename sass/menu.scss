@@ -1,0 +1,86 @@
+@import "_lg-grid";
+.menu-contenedor{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 10px 10px 10px 10px;
+    background: rgba(white,.9);
+    z-index: 999999;
+}
+.logo {
+    @include display;
+    img {
+        width: 50px;
+        height: 50px;
+        border: 1px solid $color-fondo;
+        border-radius: 50%;
+        filter: grayscale(10);
+    }
+}
+
+.logo-texto {
+    h1,h3{
+        font-family:$fuente;
+        font-weight: normal;  
+        font-size: 18px;
+    }
+}
+
+.negrita {
+    font-weight: 800;
+}
+
+
+.menu{
+   @include display; 
+        z-index: -5;
+    transition: all .5s;
+
+}
+.submenu{
+    padding: 10px;
+    font-family: $fuente;
+    color: #333;
+    transition: all .5s;
+    &:hover{
+        background: rgba(black,.5);
+        color: white;
+        transition: all .5s;
+    }
+} 
+.icono-menu{
+    display: none;
+}
+@media screen and (max-width:920px){
+    .menu{
+        position: absolute; 
+        flex-direction: column;
+        top: 70px;
+        width: 100%;
+        background: white;
+        left: 0;
+        top: -500%;
+        .submenu{
+            width: 100%;
+            border-top: 1px solid $color-negro;
+            text-align: center;
+        }
+    }
+    .icono-menu{
+        margin: 0;
+        width: 50px;
+        height: 50px;
+        @include display;
+        font-size: 30px;
+        padding: 0;
+        border: 1px solid $color-negro;
+        cursor: pointer;
+        i{
+            padding: 0;
+            height: 25px;
+        }
+    }
+    
+}
