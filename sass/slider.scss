@@ -34,3 +34,35 @@ $margin-slider:10%;
     color: #333;
     background: rgba(white,.5);
 }
+
+@media screen and (max-width:920px){
+    .slider{
+        background-position: right;
+    }
+}
+
+@media screen and (max-width:850px){
+   
+    .speach,.speach-parrafo,.speach-boton{
+        margin-left:10px; 
+    }
+}
+
+@media screen and (max-width:768px){
+    .speach{
+        font-size: 25px;
+    }
+    .speach-parrafo{
+        font-size: 17px;
+    }
+    .speach-boton{
+        font-size: 14px;
+    }
+    
+}
+
+@media screen and (max-width:369px){
+    .slider{
+        background-position: left;
+    }
+}
