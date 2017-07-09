@@ -16,3 +16,32 @@ $padding-contenedor:20px;
     top: 70px;
     transition: all .3s;
 }
+
+.titulo{
+    font-family: $fuente;
+    font-weight: normal;
+    padding: $padding-contenedor;
+    font-size: 28px;
+    position: relative;
+    &:after{
+        content: "";
+        position: absolute;
+        border-top: 1px solid $color-negro;
+        border-bottom: 1px solid $color-negro;
+        width: 100px;
+        height: 15px;
+        bottom: -5px; 
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    &:before{
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 2px;
+        background: $color-negro;
+         transform: translateX(-50%) translateY(-50%);
+        left: 50%;
+        bottom: 10px;
+    }
+}
