@@ -95,3 +95,27 @@
   .contadores-contenido:nth-child(2) {
     -webkit-box-shadow: inset -10px 0px 0px -9px rgba(0, 0, 0, 0.2);
     box-shadow: inset -10px 0px 0px -9px rgba(0, 0, 0, 0.2); }
+
+.titulo-comienzo {
+  top: -40px; }
+
+.sobremi {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.sobremi-texto {
+  width: 50%;
+  margin: 10px;
+  font-family: "Raleway", sans-serif;
+  line-height: 25px; }
+
+.sobremi-imagenes {
+  border: 1px solid #e8e8e8;
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  grid-template-rows: repeat(2, 125px);
+  grid-gap: 4px;
+  -webkit-box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.75); }
