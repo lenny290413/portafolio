@@ -1,2 +1,40 @@
 @import "_lg-grid";   
  
+.contadores-contenedor{
+    position: relative;
+    top: -80px;
+} 
+.contadores{
+    background: $color-fondo;
+    @include display;
+    box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.75);
+
+}
+.contadores-contenido{
+    @include display;
+    flex-direction: column;
+    flex: auto;
+    height: 160px;
+    
+    span{
+        font-size: 40px;
+        color: $color-negro;
+        height: 40px;
+    }
+    h2,p{
+        font-family: $fuente;
+        margin: 3px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    p{
+        color: $color-negro;
+    }
+    &:nth-child(1){
+        box-shadow: inset -10px 0px 0px -9px rgba(0,0,0,0.2);
+    }
+     &:nth-child(2){
+        box-shadow: inset -10px 0px 0px -9px rgba(0,0,0,0.2);
+    }
+}
