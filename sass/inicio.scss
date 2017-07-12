@@ -58,3 +58,28 @@
     grid-gap: 4px;
     box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.75);
 }
+
+.trabajo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.trabajo-contenido{
+    width: 30%;
+    margin: 10px;
+    color: $color-negro;
+    text-align: center;
+    p{
+        padding: 5px;
+    }
+}
+.trabajo-top{
+    span{
+        font-size: 40px;
+    }
+    h3{
+        font-family: $fuente;
+        padding: 5px;
+        margin: 5px 0px;
+    }
+}
