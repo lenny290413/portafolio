@@ -60,26 +60,78 @@
     grid-gap: 4px;
     box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.75);
 }
-
+.trabajo-contenedor{
+    background-image: url(../imagenes/fondo-servicios.jpeg);
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background:rgba($color-negro,.9);
+    }
+}
 .trabajo{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    z-index: 99;
 }
 .trabajo-contenido{
-    width: 30%;
+    width: 350px;
     margin: 20px 10px 10px 10px;
-    
+    padding: 10px;
     color: $color-negro;
     text-align: center;
-    flex: auto;
+    position: relative;
     transition: all .3s;
+    height: 190px;
+    color: white;
     p{
         padding: 5px;
     }
     &:hover{
-        color: black;
+        color: $color-fondo;
         transition: all .3s;
+    }
+    &:after{
+        content:"";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background: white;
+        box-shadow: 0 -190px white ;
+        transition: all .5s;
+        z-index:400;
+        
+    }
+&:before{
+        content:"";
+        position: absolute;
+        width: 2px;
+        height: 0%;
+        bottom: 0;
+        left: 0;
+        background: white;
+        box-shadow: 350px 0px white;
+        transition: all .5s;
+        z-index:400;
+    
+    }
+    &:hover:after{
+        width: 100%;
+        box-shadow: 0 -190px white ;
+        transition: all .5s;
+    }
+      &:hover:before{
+        height: 100%;
+        transition: all .5s;
     }
 }
 .trabajo-top{
@@ -90,5 +142,72 @@
         font-family: $fuente;
         padding: 5px;
         margin: 5px 0px;
+    }
+}
+
+
+
+/* <div class="segundo-contenedor largo">
+      <div class="segundo distancia">
+          <div class="estudios-contenedor">
+              <h2 class="titulo">Educación</h2>
+          </div>
+          <div class="trabajos-contenedor">
+              <h2 class="titulo">Experiencia Laboral</h2>
+          </div>
+      </div>
+  </div>*/
+
+
+.segundo-contenedor{
+    background: $color-fondo;
+}
+.segundo{
+    display: flex;
+    justify-content: space-between;
+    h2{
+        text-align: center;
+    }
+}
+.estudios-contenedor{
+    width: 45%;
+    margin: 5px;
+    background: white;
+    flex: auto;
+    border: 1px solid $color-fondo2;
+    margin-top: 20px;
+    padding: 20px;
+}
+.trabajos-contenedor{
+    width: 45%;
+    margin: 5px;
+    background: white;
+    flex: auto;
+    border: 1px solid $color-fondo2;
+    margin-top: 20px;
+    padding: 20px;
+}
+.estudios-contenido{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    color: $color-negro;
+}
+.estudios-izquierda{
+    width: 30%;
+    text-align: center;
+    span{
+        font-size: 40px;
+    }
+    h3{
+        font-family: $fuente;
+    }
+   
+}
+.estudio-derecha{
+    width: 70%;
+     h4{
+        font-family: $fuente;
+         font-size: 20px;
     }
 }

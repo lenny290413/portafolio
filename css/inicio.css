@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .movimiento {
   top: 70px;
   -webkit-transition: all .3s;
@@ -125,6 +126,20 @@
   -webkit-box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.75); }
 
+.trabajo-contenedor {
+  background-image: url(../imagenes/fondo-servicios.jpeg);
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed; }
+  .trabajo-contenedor::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(93, 93, 93, 0.9); }
+
 .trabajo {
   display: -webkit-box;
   display: -webkit-flex;
@@ -136,27 +151,68 @@
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  z-index: 99; }
 
 .trabajo-contenido {
-  width: 30%;
+  width: 350px;
   margin: 20px 10px 10px 10px;
+  padding: 10px;
   color: #5d5d5d;
   text-align: center;
-  -webkit-box-flex: 1;
-  -webkit-flex: auto;
-  -ms-flex: auto;
-  flex: auto;
+  position: relative;
   -webkit-transition: all .3s;
   -o-transition: all .3s;
-  transition: all .3s; }
+  transition: all .3s;
+  height: 190px;
+  color: white; }
   .trabajo-contenido p {
     padding: 5px; }
   .trabajo-contenido:hover {
-    color: black;
+    color: #f5f5f5;
     -webkit-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s; }
+  .trabajo-contenido:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: white;
+    -webkit-box-shadow: 0 -190px white;
+    box-shadow: 0 -190px white;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    z-index: 400; }
+  .trabajo-contenido:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0%;
+    bottom: 0;
+    left: 0;
+    background: white;
+    -webkit-box-shadow: 350px 0px white;
+    box-shadow: 350px 0px white;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    z-index: 400; }
+  .trabajo-contenido:hover:after {
+    width: 100%;
+    -webkit-box-shadow: 0 -190px white;
+    box-shadow: 0 -190px white;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s; }
+  .trabajo-contenido:hover:before {
+    height: 100%;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s; }
 
 .trabajo-top span {
   font-size: 40px; }
@@ -165,3 +221,78 @@
   font-family: "Raleway", sans-serif;
   padding: 5px;
   margin: 5px 0px; }
+
+/* <div class="segundo-contenedor largo">
+      <div class="segundo distancia">
+          <div class="estudios-contenedor">
+              <h2 class="titulo">Educación</h2>
+          </div>
+          <div class="trabajos-contenedor">
+              <h2 class="titulo">Experiencia Laboral</h2>
+          </div>
+      </div>
+  </div>*/
+.segundo-contenedor {
+  background: #f5f5f5; }
+
+.segundo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .segundo h2 {
+    text-align: center; }
+
+.estudios-contenedor {
+  width: 45%;
+  margin: 5px;
+  background: white;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  border: 1px solid #e8e8e8;
+  margin-top: 20px;
+  padding: 20px; }
+
+.trabajos-contenedor {
+  width: 45%;
+  margin: 5px;
+  background: white;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  border: 1px solid #e8e8e8;
+  margin-top: 20px;
+  padding: 20px; }
+
+.estudios-contenido {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 20px;
+  color: #5d5d5d; }
+
+.estudios-izquierda {
+  width: 30%;
+  text-align: center; }
+  .estudios-izquierda span {
+    font-size: 40px; }
+  .estudios-izquierda h3 {
+    font-family: "Raleway", sans-serif; }
+
+.estudio-derecha {
+  width: 70%; }
+  .estudio-derecha h4 {
+    font-family: "Raleway", sans-serif;
+    font-size: 20px; }
