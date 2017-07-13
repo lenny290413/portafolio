@@ -1,87 +1,94 @@
-@import "_lg-grid";   
- 
-.contadores-contenedor{
+@import "_lg-grid";
+.contadores-contenedor {
     position: relative;
     top: -80px;
-} 
-.contadores{
+}
+
+.contadores {
     background: $color-fondo;
     @include display;
-    box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.75);
-
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.75);
 }
-.contadores-contenido{
+
+.contadores-contenido {
     @include display;
     flex-direction: column;
     flex: auto;
     height: 160px;
-    
-    span{
+    span {
         font-size: 40px;
         color: $color-negro;
         height: 40px;
     }
-    h2,p{
+    h2,
+    p {
         font-family: $fuente;
         margin: 3px;
     }
-    h2{
+    h2 {
         font-size: 30px;
     }
-    p{
+    p {
         color: $color-negro;
     }
-    &:nth-child(1){
-        box-shadow: inset -10px 0px 0px -9px rgba(0,0,0,0.2);
+    &:nth-child(1) {
+        box-shadow: inset -10px 0px 0px -9px rgba(0, 0, 0, 0.2);
     }
-     &:nth-child(2){
-        box-shadow: inset -10px 0px 0px -9px rgba(0,0,0,0.2);
+    &:nth-child(2) {
+        box-shadow: inset -10px 0px 0px -9px rgba(0, 0, 0, 0.2);
     }
 }
-.titulo-comienzo{
-    top: -40px;    
+
+.titulo-comienzo {
+    top: -40px;
 }
-.sobremi{
+
+.sobremi {
     display: flex;
     justify-content: space-between;
 }
-.sobremi-texto{
+
+.sobremi-texto {
     width: 50%;
     margin: 10px;
     font-family: $fuente;
     line-height: 25px;
     text-align: justify;
 }
-.sobremi-imagenes{
+
+.sobremi-imagenes {
     border: 1px solid $color-fondo2;
     display: grid;
-    grid-template-columns: repeat(2,250px);
-    grid-template-rows: repeat(2,125px);
+    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: repeat(2, 125px);
     grid-gap: 4px;
-    box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.75);
 }
-.trabajo-contenedor{
+
+.trabajo-contenedor {
     background-image: url(../imagenes/fondo-servicios.jpeg);
     background-size: cover;
     position: relative;
     background-attachment: fixed;
-    &::after{
+    &::after {
         content: "";
         position: absolute;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
-        background:rgba($color-negro,.9);
+        background: rgba($color-negro, .9);
     }
 }
-.trabajo{
+
+.trabajo {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     z-index: 99;
 }
-.trabajo-contenido{
+
+.trabajo-contenido {
     width: 350px;
     margin: 20px 10px 10px 10px;
     padding: 10px;
@@ -91,28 +98,27 @@
     transition: all .3s;
     height: 190px;
     color: white;
-    p{
+    p {
         padding: 5px;
     }
-    &:hover{
+    &:hover {
         color: $color-fondo;
         transition: all .3s;
     }
-    &:after{
-        content:"";
+    &:after {
+        content: "";
         position: absolute;
         width: 0%;
         height: 2px;
         bottom: 0;
         left: 0;
         background: white;
-        box-shadow: 0 -190px white ;
+        box-shadow: 0 -190px white;
         transition: all .5s;
-        z-index:400;
-        
+        z-index: 400;
     }
-&:before{
-        content:"";
+    &:before {
+        content: "";
         position: absolute;
         width: 2px;
         height: 0%;
@@ -121,30 +127,29 @@
         background: white;
         box-shadow: 350px 0px white;
         transition: all .5s;
-        z-index:400;
-    
+        z-index: 400;
     }
-    &:hover:after{
+    &:hover:after {
         width: 100%;
-        box-shadow: 0 -190px white ;
+        box-shadow: 0 -190px white;
         transition: all .5s;
     }
-      &:hover:before{
+    &:hover:before {
         height: 100%;
         transition: all .5s;
     }
 }
-.trabajo-top{
-    span{
+
+.trabajo-top {
+    span {
         font-size: 40px;
     }
-    h3{
+    h3 {
         font-family: $fuente;
         padding: 5px;
         margin: 5px 0px;
     }
 }
-
 
 
 /* <div class="segundo-contenedor largo">
@@ -158,18 +163,19 @@
       </div>
   </div>*/
 
-
-.segundo-contenedor{
+.segundo-contenedor {
     background: $color-fondo;
 }
-.segundo{
+
+.segundo {
     display: flex;
     justify-content: space-between;
-    h2{
+    h2 {
         text-align: center;
     }
 }
-.estudios-contenedor{
+
+.estudios-contenedor {
     width: 45%;
     margin: 5px;
     background: white;
@@ -178,7 +184,8 @@
     margin-top: 20px;
     padding: 20px;
 }
-.trabajos-contenedor{
+
+.trabajos-contenedor {
     width: 45%;
     margin: 5px;
     background: white;
@@ -187,27 +194,79 @@
     margin-top: 20px;
     padding: 20px;
 }
-.estudios-contenido{
+
+.estudios-contenido {
     display: flex;
     align-items: center;
     margin-top: 20px;
     color: $color-negro;
 }
-.estudios-izquierda{
+
+.estudios-izquierda {
     width: 30%;
     text-align: center;
-    span{
+    span {
         font-size: 40px;
     }
-    h3{
+    h3 {
         font-family: $fuente;
     }
-   
 }
-.estudio-derecha{
+
+.estudio-derecha {
     width: 70%;
-     h4{
+    h4 {
         font-family: $fuente;
-         font-size: 20px;
+        font-size: 20px;
+    }
+}
+
+.trabajo .titulo {
+    color: white;
+    &::before {
+        background: white;
+    }
+    &::after {
+        border-color: white;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .sobremi{
+        flex-direction: column;
+    }
+    .sobremi-texto{
+        width: 100%;
+    }
+    .sobremi-imagenes{
+        overflow: hidden;
+        grid-template-columns: repeat(2,150px);
+        grid-template-rows: repeat(2,120px);
+    }
+    .segundo{
+        flex-direction: column;
+    }
+    .estudios-contenedor{
+        width: 100%;
+    }
+    .trabajos-contenedor{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .contadores {
+        flex-wrap: wrap;
+    }
+    .contadores-contenido {
+        text-align: center;
+        flex: auto;
+        width: 50%;
+        &:nth-child(2) {
+            box-shadow: inset 0px 0px 0px -9px rgba(0, 0, 0, 0.2);
+        }
+        &:nth-child(3) {
+            box-shadow: inset 0px 10px 0px -9px rgba(0, 0, 0, 0.2);
+        }
     }
 }
