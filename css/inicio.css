@@ -7,7 +7,7 @@
 .titulo {
   font-family: "Raleway", sans-serif;
   font-weight: normal;
-  padding: 20px;
+  padding: 40px 20px;
   font-size: 28px;
   position: relative; }
   .titulo:after {
@@ -103,13 +103,18 @@
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
 .sobremi-texto {
   width: 50%;
   margin: 10px;
   font-family: "Raleway", sans-serif;
-  line-height: 25px; }
+  line-height: 25px;
+  text-align: justify; }
 
 .sobremi-imagenes {
   border: 1px solid #e8e8e8;
@@ -135,11 +140,23 @@
 
 .trabajo-contenido {
   width: 30%;
-  margin: 10px;
+  margin: 20px 10px 10px 10px;
   color: #5d5d5d;
-  text-align: center; }
+  text-align: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
   .trabajo-contenido p {
     padding: 5px; }
+  .trabajo-contenido:hover {
+    color: black;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
 
 .trabajo-top span {
   font-size: 40px; }

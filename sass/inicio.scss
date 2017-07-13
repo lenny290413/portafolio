@@ -43,12 +43,14 @@
 }
 .sobremi{
     display: flex;
+    justify-content: space-between;
 }
 .sobremi-texto{
     width: 50%;
     margin: 10px;
     font-family: $fuente;
     line-height: 25px;
+    text-align: justify;
 }
 .sobremi-imagenes{
     border: 1px solid $color-fondo2;
@@ -66,11 +68,18 @@
 }
 .trabajo-contenido{
     width: 30%;
-    margin: 10px;
+    margin: 20px 10px 10px 10px;
+    
     color: $color-negro;
     text-align: center;
+    flex: auto;
+    transition: all .3s;
     p{
         padding: 5px;
+    }
+    &:hover{
+        color: black;
+        transition: all .3s;
     }
 }
 .trabajo-top{

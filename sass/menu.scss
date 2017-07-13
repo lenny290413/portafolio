@@ -1,13 +1,20 @@
 @import "_lg-grid";
+
 .menu-contenedor{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     position: fixed;
     width: 100%;
     top: 0;
     padding: 10px 10px 10px 10px;
     background: rgba(white,.9);
     z-index: 999999;
+}
+.header-conten{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99999;
 }
 .logo {
     @include display;
@@ -17,6 +24,7 @@
         border: 1px solid $color-fondo;
         border-radius: 50%;
         filter: grayscale(10);
+        margin-right: 10px;
     }
 }
 
@@ -34,8 +42,8 @@
 
 
 .menu{
-   @include display; 
-        z-index: -5;
+    @include display; 
+    z-index: -5;
     transition: all .5s;
 
 }

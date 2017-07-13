@@ -7,7 +7,7 @@
 .titulo {
   font-family: "Raleway", sans-serif;
   font-weight: normal;
-  padding: 20px;
+  padding: 40px 20px;
   font-size: 28px;
   position: relative; }
   .titulo:after {
