@@ -51,7 +51,9 @@
     padding: 10px;
     font-family: $fuente;
     color: #333;
+    margin: 5px;
     transition: all .5s;
+    
     &:hover{
         background: rgba(black,.5);
         color: white;
@@ -61,6 +63,8 @@
 .icono-menu{
     display: none;
 }
+.contact{background: $color-negro;
+color: white;}
 @media screen and (max-width:920px){
     .menu{
         position: absolute; 

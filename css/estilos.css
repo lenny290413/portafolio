@@ -9,7 +9,8 @@
   font-weight: normal;
   padding: 40px 20px;
   font-size: 28px;
-  position: relative; }
+  position: relative;
+  text-align: center; }
   .titulo:after {
     content: "";
     position: absolute;
