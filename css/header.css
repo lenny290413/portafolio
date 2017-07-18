@@ -7,18 +7,19 @@
 .titulo {
   font-family: "Raleway", sans-serif;
   font-weight: normal;
-  padding: 40px 20px;
   font-size: 28px;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px; }
   .titulo:after {
     content: "";
     position: absolute;
-    border-top: 1px solid #5d5d5d;
-    border-bottom: 1px solid #5d5d5d;
+    border-top: 1px solid #58A2B9;
+    border-bottom: 1px solid #58A2B9;
     width: 100px;
     height: 15px;
-    bottom: -5px;
+    bottom: -30px;
     left: 50%;
     -webkit-transform: translateX(-50%) translateY(-50%);
     -ms-transform: translateX(-50%) translateY(-50%);
@@ -28,9 +29,14 @@
     position: absolute;
     width: 200px;
     height: 2px;
-    background: #5d5d5d;
+    background: #58A2B9;
     -webkit-transform: translateX(-50%) translateY(-50%);
     -ms-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     left: 50%;
-    bottom: 10px; }
+    bottom: -15px; }
+
+@media screen and (max-width: 369px) {
+  .titulo {
+    margin-top: 30px;
+    margin-bottom: 30px; } }
